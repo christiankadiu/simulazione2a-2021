@@ -1,7 +1,6 @@
 package a06.e1;
 
 import java.util.Objects;
-import java.util.Optional;
 
 /*
  * A standard generic Pair<E1,E2>, with getters, hashCode, equals, and toString well implemented. 
