@@ -18,25 +18,8 @@ public class LogicsImpl implements Logics{
                     row.add(false);
                 }
             }
-            print();
         }
 
-        void print(){
-            for (int i = 0; i < this.size; i++){
-                for (int k = 0; k < this.size; k++){
-                    System.out.print(celle.get(i).get(k)+"\t");
-                }
-                System.out.println("\t");
-            }
-            System.out.println("\t");
-        }
-
-        void printList(List<Pair<Integer, Integer>> lista){
-            for (Pair<Integer,Integer> pair : lista) {
-                System.out.print("("+pair.getX()+", "+pair.getY()+")"+"\t");
-            }
-            System.out.println();
-        }
 
 
         private Boolean isAnyActive(){
@@ -84,10 +67,8 @@ public class LogicsImpl implements Logics{
             lista.add(pos);
             if (isAnyActive()){
                 List<Pair<Integer,Integer>> l = new ArrayList<>(compute(pos));
-                printList(l);
                 this.currentPos = pos;
                 System.out.println("la posizione corrente e: "+currentPos.getX() + currentPos.getY());
-                print();
                 return l;
             }else{
                 this.celle.get(pos.getX()).set(pos.getY(), true);

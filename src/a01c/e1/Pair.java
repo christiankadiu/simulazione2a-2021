@@ -41,7 +41,8 @@ public class Pair<E1,E2> {
 		if (getClass() != obj.getClass()) {
 			return false;
 		}
-		Pair other = (Pair) obj;
+		@SuppressWarnings("unchecked")
+		Pair<E1, E2> other = (Pair<E1, E2>) obj;
 		return Objects.equals(e1, other.e1) && Objects.equals(e2, other.e2);
 	}
 
